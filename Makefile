@@ -12,6 +12,9 @@ restart: down up
 rebuild: down docker-build
 reset: rebuild up
 
+test-1:
+	echo "test"
+
 docker-up:
 	docker-compose -p $(DOCKER_PROJECT_TITLE) up -d
 	@echo ***Success! Your app is ready and available at http://localhost:$(DOCKER_NGINX_PORT) and you can connect PostgreSQL from your host machine on port $(DOCKER_POSTGRESQL_PORT).***
